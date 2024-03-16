@@ -1,33 +1,67 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'bootstrap/dist/css/bootstrap.css';
+@import 'font-awesome/css/font-awesome.min.css';
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.product-card{
+  width: auto;
+  max-width: 250px;
+  padding: 5px;
+  background-color: white;
+  cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.product-card-image{
+  width: 200px;
+  height: 220px;
+}
+.product-card-title{
+  overflow: hidden;
+  height: 48px;
+}
+
+.main-container {
+  padding-top: 100px;
+}
+
+.cart-container {
+  margin-top: 100px;
+  height: 80vh;
+}
+
+.cart-container-count {
+  font-size: 12px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -5px;
+  left: 6px;
+}
+
+.product-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .product-page {
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 140px;
+  } 
+
+  .product-page-content {
+    width: 100%;
+    padding: 12px;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .prod-detail-image {
+    max-width: 260px;
   }
 }
